@@ -3,6 +3,7 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="jkvillavo12col.com.co.databases.MainActivity">
 
+
     <item android:id="@+id/action_desloguear"
           android:orderInCategory="100"
           android:title="Salir app"

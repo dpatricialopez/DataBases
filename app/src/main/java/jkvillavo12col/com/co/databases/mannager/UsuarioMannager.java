@@ -155,7 +155,7 @@ public class UsuarioMannager {
 
    }
 
-   public  boolean deleteVehiculo(Context applicationContext,int id) {
+/*   public  boolean deleteVehiculo(Context applicationContext,int id) {
       ConexionSQLite conexionSQLite = ConexionSQLite.getInstance(applicationContext);
       int filasEliminada=0;
       if(conexionSQLite!=null){
@@ -180,7 +180,7 @@ public class UsuarioMannager {
          conexionSQLite.closeDatabase();
       }
 
-   }
+   }*/
 
 
    public boolean existUsuario (Context applicationContext, long idUsuario) {
