@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/dialogAddPerdosa_buttonCancelar"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" android:layout_toStartOf="@+id/dialogAddPerdosa_buttonAgregar"
+        android:background="@null" android:text="@string/persona_dialogCancelar" android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        android:textColor="@color/accent"/>
+    <Button
+        android:id="@+id/dialogAddPerdosa_buttonAgregar"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" android:layout_alignParentEnd="true"
+        android:background="@null" android:text="@string/persona_dialogAdd" android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/accent"/>
+
+    <LinearLayout
+        android:id="@+id/textView" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" android:layout_marginBottom="56dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout android:id="@+id/dialogAddPerdosa_textInputCorreo" android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content">
+
+                    <EditText android:id="@+id/dialogAddPerdosa_editTextCorreo" android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:hint="@string/persona_correo" android:inputType="textEmailAddress" android:maxLength="50"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout android:id="@+id/dialogAddPerdosa_textInputNombres" android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content">
+
+                    <EditText android:id="@+id/dialogAddPerdosa_editTextNombres" android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:hint="@string/persona_nombres" android:inputType="textPersonName" android:maxLength="50"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout android:id="@+id/dialogAddPerdosa_textInputApellidos"
+                                                               android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content">
+
+                    <EditText android:id="@+id/dialogAddPerdosa_editTextApellidos" android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:hint="@string/persona_apellidos" android:inputType="textPersonName" android:maxLength="50"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout android:id="@+id/dialogAddPerdosa_textInputPassword"
+                                                               android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content">
+
+                    <EditText android:id="@+id/dialogAddPerdosa_editTextPassword" android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:hint="@string/persona_password" android:inputType="textPassword" android:maxLength="50"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout android:id="@+id/dialogAddPerdosa_textInputSexo"
+                                                               android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                    <Spinner android:id="@+id/dialogAddPerdosa_spinnerSexo" android:layout_width="match_parent" android:layout_height="48dp"
+                             android:entries="@array/personaSexos"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="jkvillavo12col.com.co.databases.LogginActivity"
+    tools:showIn="@layout/activity_loggin">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                  android:layout_marginRight="@dimen/activity_horizontal_margin"
+                  android:layout_marginTop="@dimen/activity_vertical_margin" android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout android:id="@+id/loggin_textInputCorreo" android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content">
+
+            <EditText android:id="@+id/loggin_editTextCorreo" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_marginRight="@dimen/activity_horizontal_margin"
+                      android:hint="@string/loggin_correo" android:inputType="text"
+                      android:maxLength="50"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout android:id="@+id/loggin_textInputPassword" android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content">
+
+            <EditText android:id="@+id/loggin_editTextPassword" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_marginRight="@dimen/activity_horizontal_margin"
+                      android:hint="@string/loggin_password" android:inputType="textPassword"
+                      android:maxLength="20"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/selector_accent" android:onClick="ingresar" android:text="@string/loggin_ingresar"
+                android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textColor="@color/accent"/>
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
