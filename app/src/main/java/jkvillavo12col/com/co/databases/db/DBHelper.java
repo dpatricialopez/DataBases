@@ -42,6 +42,8 @@ public class DBHelper extends SQLiteOpenHelper {
       try {
 
          sqLiteDatabase.execSQL(DBConstants.Usuario.getSQLCreate());
+         sqLiteDatabase.execSQL(DBConstants.Juego.getSQLCreate());
+         sqLiteDatabase.execSQL(DBConstants.Vehiculo.getSQLCreate());
 
       } catch (Exception e) {
          Log.e(AppConstants.TAG, e.getMessage());

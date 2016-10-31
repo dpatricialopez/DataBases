@@ -15,12 +15,6 @@ public class VehiculoDaoSqlite {
 
    private static VehiculoDaoSqlite instance;
 
-   /**
-    * Obtiene la instancia unica de la clase
-    * Creado el 28/10/16 a las 12:02 PM <br>
-    *
-    * @return instancia unica de la clase
-    */
    public static VehiculoDaoSqlite getInstance () {
 
       if (instance == null) {
@@ -34,90 +28,26 @@ public class VehiculoDaoSqlite {
       instance = null;
    }
 
-   public boolean existUsuario (ConexionSQLite conexionSQLite, long idUsuario) {
 
-      String[] args = new String[]{String.valueOf(idUsuario)};
 
-      Cursor cursor = conexionSQLite.getDbSqlite().query(DBConstants.Usuario.TABLE_USUARIO, DBConstants.Usuario.obtenerCampos(),
-              DBConstants.Usuario.ID + "=?", args, null, null, null);
+   public long insertVehiculo (ConexionSQLite conexionSQLite, ContentValues contentValues) {
 
-      if (cursor.moveToFirst()) {
-         return true;
-      }
-      return false;
-   }
-
-   /**
-    * Consulta un usuario por medio de su id unico, si lo encuentra construye un objeto y devuelve toda la informacion
-    *
-    * @param conexionSQLite conexion a la database
-    * @param idUsuario      identificador unico del usuario
-    *
-    * @return objeto con los datos del usuario
-    */
-   public Usuario findUsuarioById (ConexionSQLite conexionSQLite, long idUsuario) throws Exception {
-
-      Usuario usuarioLogueadoDTO = null;
-      String[] args = new String[]{String.valueOf(idUsuario)};
-
-      Cursor cursor = conexionSQLite.getDbSqlite().query(DBConstants.Usuario.TABLE_USUARIO, DBConstants.Usuario.obtenerCampos(),
-              DBConstants.Usuario.ID + "=?", args,
-              null, null, null);
-
-      if (cursor.moveToFirst()) {
-         usuarioLogueadoDTO = Usuario.obtenerUsuarioByCursor(cursor);
-      }
-      return usuarioLogueadoDTO;
-   }
-
-   public Usuario findUsuarioByUserPass (ConexionSQLite conexionSQLite, String usuario, String contrasenia) {
-
-      Usuario usuarioLogueadoDTO = null;
-      String[] args = new String[]{usuario, contrasenia};
-
-      Cursor cursor = conexionSQLite.getDbSqlite().query(
-              DBConstants.Usuario.TABLE_USUARIO,
-              DBConstants.Usuario.obtenerCampos(),
-              DBConstants.Usuario.CORREO + "=? AND " + DBConstants.Usuario.PASSWORD + "=?",
-              args,
-              null, null, null);
-
-      if (cursor.moveToFirst()) {
-         usuarioLogueadoDTO = Usuario.obtenerUsuarioByCursor(cursor);
-      }
-      return usuarioLogueadoDTO;
-   }
-
-   /**
-    * Inserta un usuario en la database
-    * Creado el 21/04/2016 a las 5:46 PM <br>
-    *
-    * @param contentValues valores a insertar
-    *
-    * @return el identificador del usuario ingresado
-    *
-    * @author <a href="http://www.quipux.com/">Quipux Software.</a></br>@param conexionSQLite
-    */
-   public long insertUsuario (ConexionSQLite conexionSQLite, ContentValues contentValues) {
-
-      return conexionSQLite.getDbSqlite().insertOrThrow(DBConstants.Usuario.TABLE_USUARIO, null, contentValues);
+      return conexionSQLite.getDbSqlite().insertOrThrow(DBConstants.Vehiculo.TABLE_VEHICULOS, null, contentValues);
 
    }
 
-   /**
-    * Actualiza en databas ela informacion de un usuario
-    * Creado el 21/04/2016 a las 6:10 PM <br>
-    *
-    * @param conexionSQLite conexion a la database
-    * @param idUsuario      identificador unico del usuario
-    * @param contentValues  contentt values con la info de usuario
-    *
-    * @author <a href="http://www.quipux.com/">Quipux Software.</a></br>
-    */
-   public void updateUsuario (ConexionSQLite conexionSQLite, long idUsuario, ContentValues contentValues) {
 
-      String[] args = new String[]{String.valueOf(idUsuario)};
-      conexionSQLite.getDbSqlite().update(DBConstants.Usuario.TABLE_USUARIO, contentValues, DBConstants.Usuario.ID + "=?", args);
+   public void updateVehiculo (ConexionSQLite conexionSQLite, long idVehiculo, ContentValues contentValues) {
+
+      String[] args = new String[]{String.valueOf(idVehiculo)};
+      conexionSQLite.getDbSqlite().update(DBConstants.Vehiculo.TABLE_VEHICULOS, contentValues, DBConstants.Vehiculo.ID + "=?", args);
+
+   }
+
+   public void deleteVehiculo (ConexionSQLite conexionSQLite, long idVehiculo, ContentValues contentValues) {
+
+      String[] args = new String[]{String.valueOf(idVehiculo)};
+      conexionSQLite.getDbSqlite().delete(DBConstants.Vehiculo.TABLE_VEHICULOS,  DBConstants.Vehiculo.ID + "=?", args);
 
    }
 
