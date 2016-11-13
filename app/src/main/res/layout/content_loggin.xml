@@ -36,6 +36,14 @@
 
         </android.support.design.widget.TextInputLayout>
 
+        <CheckBox
+            android:text="Recordar"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp" android:layout_marginRight="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sesion" />
+
         <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:background="@drawable/selector_accent" android:onClick="ingresar" android:text="@string/loggin_ingresar"
                 android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textColor="@color/accent"/>

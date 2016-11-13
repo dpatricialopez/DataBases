@@ -8,4 +8,20 @@
           android:orderInCategory="100"
           android:title="Salir app"
           app:showAsAction="never"/>
+    <item android:id="@+id/addJuego"
+        android:orderInCategory="100"
+        android:title="Añadir Juego"
+        app:showAsAction="never"/>
+    <item android:id="@+id/addCr"
+        android:orderInCategory="100"
+        android:title="Añadir Vehìculo"
+        app:showAsAction="never"/>
+    <item android:id="@+id/export_juego"
+        android:orderInCategory="100"
+        android:title="Exportar Juegos"
+        app:showAsAction="never"/>
+    <item android:id="@+id/export_car"
+        android:orderInCategory="100"
+        android:title="Exportar Vehìculos"
+        app:showAsAction="never"/>
 </menu>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+    <TextView
+        android:id="@+id/customItemVehicle_textViewPlaca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_alignParentStart="true" android:layout_alignParentTop="true"
+        android:text="Placa" android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+    <TextView
+        android:id="@+id/customItemVehicle_textViewCiudad"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignParentStart="true" android:layout_below="@+id/customItemVehicle_textViewPlaca" android:layout_marginLeft="6dp"
+        android:text="Envigado"/>
+    <TextView
+        android:id="@+id/customItemVehicle_textViewAnio"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true" android:layout_alignParentTop="true"
+        android:text="2016" android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+    <TextView
+        android:id="@+id/customItemVehicle_textViewMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true" android:layout_below="@+id/customItemVehicle_textViewAnio" android:text="Chevrolet"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <TextView
+        android:id="@+id/customItemVehicle_textViewColor"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/customItemVehicle_textViewMarca" android:layout_marginTop="4dp"
+        android:text=""/>
+
+</RelativeLayout>

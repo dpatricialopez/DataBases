@@ -104,6 +104,13 @@ public class UsuarioDaoSqlite {
 
    }
 
+   public long deleteJuego (ConexionSQLite conexionSQLite, ContentValues contentValues, long idJuego) {
+      String[] args = new String[]{String.valueOf(idJuego)};
+
+      return conexionSQLite.getDbSqlite().delete(DBConstants.Usuario.TABLE_USUARIO, DBConstants.Juego.ID + "=?", args);
+
+   }
+
    /**
     * Actualiza en databas ela informacion de un usuario
     * Creado el 21/04/2016 a las 6:10 PM <br>
